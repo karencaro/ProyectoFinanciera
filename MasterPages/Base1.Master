@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Base1.master.cs" Inherits="ProyectoFinanciera.MasterPages.Base1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: 223px;
+        }
+        .auto-style2 {
+            width: 139px;
+            height: 288px;
+            text-align: center;
+        }
+        .auto-style4 {
+            height: 288px;
+        }
+        .auto-style5 {
+            height: 53px;
+        }
+        .auto-style10 {
+            font-size: xx-small;
+        }
+        .auto-style11 {
+            position: relative;
+            left: 411px;
+            top: 0px;
+            width: 173px;
+            height: 87px;
+        }
+        .auto-style12 {
+            position: relative;
+            left: 44px;
+            top: -10px;
+            height: 10px;
+        }
+        .auto-style13 {
+            margin-top: 1px;
+        }
+        .auto-style14 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <form id="form1" runat="server">
+        <div>
+           
+                <table class="auto-style1">
+                    <tr>
+                        <td class="auto-style5" colspan="2" style="background-color: #EC3237">
+                            <asp:Image ID="Image1" runat="server" CssClass="auto-style11" ImageUrl="~/Imagenes/o.jpg" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style2" style="background-color: #0D1B89; font-family: 'berlin Sans FB'; font-size: large; font-weight: normal; color: #FFFFFF;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MENÚ<br />
+                            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="White" NavigateUrl="~/WebForms/Inicio.aspx">Inicio</asp:HyperLink>
+                            <br />
+                            <br />
+&nbsp;&nbsp;&nbsp;
+                            <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="White" NavigateUrl="~/WebForms/Requisitos.aspx">Requisitos</asp:HyperLink>
+                            <br />
+                            <br />
+&nbsp;&nbsp;&nbsp;
+                            <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="White" NavigateUrl="~/WebForms/SolicitarPrestamo.aspx">Solicitud de prestamo</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink4" runat="server" ForeColor="White" NavigateUrl="~/WebForms/InicioCliente.aspx">Estado de prestamo</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink5" runat="server" ForeColor="White" NavigateUrl="~/WebForms/IniciarSesion.aspx">Iniciar sesión</asp:HyperLink>
+                            <br />
+                            <br />
+                            <asp:HyperLink ID="HyperLink6" runat="server" ForeColor="White" NavigateUrl="~/WebForms/QuejasYSugerencias.aspx">Quejas y sugerencias</asp:HyperLink>
+                        </td>
+                        <td class="auto-style4">
+                             <asp:ContentPlaceHolder ID="chpContenido" runat="server">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style3" colspan="2" style="background-color: #CCCCCC">
+                             </asp:ContentPlaceHolder>
+        </div>
+        <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                             <p class="auto-style13" style="background-color: #CCCCCC">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style14" colspan="2" style="background-color: #CCCCCC"><span class="auto-style10">(646)1762515</span><br class="auto-style10" />
+                            <span class="auto-style10" style="background-color: #CCCCCC">
+                            <asp:Image ID="Image3" runat="server" CssClass="auto-style12" ImageUrl="~/Imagenes/phone_4307.png" />
+                            Ave Juarez #1449, Local 7, Col Obrera</span><br class="auto-style10" />
+                            <span class="auto-style10">Obrera, 22830 Ensenada, B.C.</span><br class="auto-style10" />
+                            <span class="auto-style10">Terminos y condiciones&nbsp;&nbsp; |&nbsp;&nbsp;
+                            Aviso de privacidad</span></td>
+                    </tr>
+                </table>
+            </p>
+        </form>
+</body>
+</html>

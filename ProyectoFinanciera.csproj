@@ -1,0 +1,404 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9702B0BA-7801-418F-B64F-F95C860B5ACF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoFinanciera</RootNamespace>
+    <AssemblyName>ProyectoFinanciera</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.3</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Imagenes\manoconbilleito.png" />
+    <Content Include="Imagenes\minicreditos-online.png" />
+    <Content Include="Imagenes\monito.png" />
+    <Content Include="Imagenes\prestamos.png" />
+    <Content Include="MasterPages\Base1.Master" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="WebForms\EstadoPrestamo.aspx" />
+    <Content Include="WebForms\ModificarCliente.aspx" />
+    <Content Include="WebForms\TablaAsesores.aspx" />
+    <Content Include="WebForms\TablaAsesoresFinancieros.aspx" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\Estilos.css" />
+    <Content Include="Imagenes\iconos-para-prestamos_Credixpress-01.png" />
+    <Content Include="Imagenes\o.jpg" />
+    <Content Include="Imagenes\phone_4307.png" />
+    <Content Include="Imagenes\Prestamo.png" />
+    <Content Include="Imagenes\Upload-Folder-icon.png" />
+    <Content Include="WebForms\AgregarAsesor.aspx" />
+    <Content Include="WebForms\AgregarAsesorFinanciero.aspx" />
+    <Content Include="WebForms\Asesor.aspx" />
+    <Content Include="WebForms\AsesorFinanciero.aspx" />
+    <Content Include="WebForms\AsesorFinancieroTabla.aspx" />
+    <Content Include="WebForms\AsesorTabla.aspx" />
+    <Content Include="WebForms\Gerente.aspx" />
+    <Content Include="WebForms\GerenteTabla.aspx" />
+    <Content Include="WebForms\IniciarSesion.aspx" />
+    <Content Include="WebForms\Inicio.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="WebForms\InicioAsesor.aspx" />
+    <Content Include="WebForms\InicioAsesorFinanciero.aspx" />
+    <Content Include="WebForms\InicioCliente.aspx" />
+    <Content Include="WebForms\InicioGerente.aspx" />
+    <Content Include="WebForms\ModificarAsesor.aspx" />
+    <Content Include="WebForms\ModificarAsesorFinanciero.aspx" />
+    <Content Include="WebForms\OpcionesGerente.aspx" />
+    <Content Include="WebForms\QuejasYSugerencias.aspx" />
+    <Content Include="WebForms\Requisitos.aspx" />
+    <Content Include="WebForms\SolicitarPrestamo.aspx" />
+    <Content Include="WebForms\SolicitudDePrestamoDocumentos.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="WebForms\AgregarAsesor.aspx.cs">
+      <DependentUpon>AgregarAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AgregarAsesor.aspx.designer.cs">
+      <DependentUpon>AgregarAsesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AgregarAsesorFinanciero.aspx.cs">
+      <DependentUpon>AgregarAsesorFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AgregarAsesorFinanciero.aspx.designer.cs">
+      <DependentUpon>AgregarAsesorFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Asesor.aspx.cs">
+      <DependentUpon>Asesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Asesor.aspx.designer.cs">
+      <DependentUpon>Asesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AsesorFinanciero.aspx.cs">
+      <DependentUpon>AsesorFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AsesorFinanciero.aspx.designer.cs">
+      <DependentUpon>AsesorFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AsesorFinancieroTabla.aspx.cs">
+      <DependentUpon>AsesorFinancieroTabla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AsesorFinancieroTabla.aspx.designer.cs">
+      <DependentUpon>AsesorFinancieroTabla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AsesorTabla.aspx.cs">
+      <DependentUpon>AsesorTabla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AsesorTabla.aspx.designer.cs">
+      <DependentUpon>AsesorTabla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\EstadoPrestamo.aspx.cs">
+      <DependentUpon>EstadoPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\EstadoPrestamo.aspx.designer.cs">
+      <DependentUpon>EstadoPrestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Gerente.aspx.cs">
+      <DependentUpon>Gerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\GerenteTabla.aspx.cs">
+      <DependentUpon>GerenteTabla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\GerenteTabla.aspx.designer.cs">
+      <DependentUpon>GerenteTabla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\IniciarSesion.aspx.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\IniciarSesion.aspx.designer.cs">
+      <DependentUpon>IniciarSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Base1.Master.cs">
+      <DependentUpon>Base1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Base1.Master.designer.cs">
+      <DependentUpon>Base1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForms\InicioAsesor.aspx.cs">
+      <DependentUpon>InicioAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\InicioAsesorFinanciero.aspx.cs">
+      <DependentUpon>InicioAsesorFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\InicioAsesorFinanciero.aspx.designer.cs">
+      <DependentUpon>InicioAsesorFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\InicioCliente.aspx.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\InicioCliente.aspx.designer.cs">
+      <DependentUpon>InicioCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\InicioGerente.aspx.cs">
+      <DependentUpon>InicioGerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\InicioGerente.aspx.designer.cs">
+      <DependentUpon>InicioGerente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\ModificarAsesor.aspx.cs">
+      <DependentUpon>ModificarAsesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\ModificarAsesor.aspx.designer.cs">
+      <DependentUpon>ModificarAsesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\ModificarAsesorFinanciero.aspx.cs">
+      <DependentUpon>ModificarAsesorFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\ModificarAsesorFinanciero.aspx.designer.cs">
+      <DependentUpon>ModificarAsesorFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\ModificarCliente.aspx.cs">
+      <DependentUpon>ModificarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\ModificarCliente.aspx.designer.cs">
+      <DependentUpon>ModificarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\OpcionesGerente.aspx.cs">
+      <DependentUpon>OpcionesGerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\OpcionesGerente.aspx.designer.cs">
+      <DependentUpon>OpcionesGerente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\QuejasYSugerencias.aspx.cs">
+      <DependentUpon>QuejasYSugerencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\QuejasYSugerencias.aspx.designer.cs">
+      <DependentUpon>QuejasYSugerencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Requisitos.aspx.cs">
+      <DependentUpon>Requisitos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Requisitos.aspx.designer.cs">
+      <DependentUpon>Requisitos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\SolicitarPrestamo.aspx.cs">
+      <DependentUpon>SolicitarPrestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\SolicitarPrestamo.aspx.designer.cs">
+      <DependentUpon>SolicitarPrestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\SolicitudDePrestamoDocumentos.aspx.cs">
+      <DependentUpon>SolicitudDePrestamoDocumentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\SolicitudDePrestamoDocumentos.aspx.designer.cs">
+      <DependentUpon>SolicitudDePrestamoDocumentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\TablaAsesores.aspx.cs">
+      <DependentUpon>TablaAsesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\TablaAsesores.aspx.designer.cs">
+      <DependentUpon>TablaAsesores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\TablaAsesoresFinancieros.aspx.cs">
+      <DependentUpon>TablaAsesoresFinancieros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\TablaAsesoresFinancieros.aspx.designer.cs">
+      <DependentUpon>TablaAsesoresFinancieros.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{c43e92ea-b438-45b6-a0ae-0a3a1ee9806f}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{712d3da0-09ff-434f-8ee9-af44a90aba56}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{8727A065-306F-4EAB-9F8B-C76EF063858E}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53978</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53978/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
